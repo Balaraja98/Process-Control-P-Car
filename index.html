@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hyundai.in</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="form-box1">
+    <img src="Hyundai Name.png" alt="logo">
+    <h1>HYUNDAI MOTOR INDIA</h1>
+  </div>
+
+ <div class="manager-box">
+
+  <!-- Left Image -->
+  <div class="left-img">
+    <img src="bala pic.jpeg" alt="Manager Photo">
+  </div>
+
+  <!-- Center Content -->
+  <div class="manager-details">
+    <h2>PBS INCHARGE</h2>
+    <p>Name    : R.GOPALAKRISHNAN</p>
+    <p>Dept    : Process Control P/Car</p>
+    <p>Phone   : +91 8973707422</p>
+    <p>Mail ID : 275072@hmil.net</p>
+  </div>
+
+  <!-- Right Image -->
+  <div class="right-img">
+    <img src="Car 2.png" alt="Car Photo">
+    <img src="CAR 3.png" alt="car photo">
+  </div>
+
+</div>
+
+  <h2>Department Employee Management</h2>
+
+  <!-- ADD BUTTON -->
+  <div class="add-btn-wrapper">
+    <button class="add-btn" onclick="openModal()">+ Add Employee</button>
+  </div>
+
+  <!-- TABLE -->
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>ID No</th>
+          <th>Name</th>
+           <th>Designation</th>
+            <th>Contract</th>
+          <th>Experience</th>  
+          <th>Skills</th>
+           <th>Pass No</th>
+          <th>Bus Route</th>
+           <th>Location</th>
+           <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="empTable"></tbody>
+    </table>
+  </div>
+
+  <!-- MODAL -->
+  <div id="empModal" class="modal">
+    <div class="modal-content">
+      <h3>Add / Update Employee</h3>
+
+      <input type="hidden" id="empIndex">
+
+
+     <input type="number" id="empId" placeholder="Employee ID" required>
+     <input type="text" id="name" placeholder="Employee Name" required>
+     <input type="text" id="role" placeholder="Designation" required>
+     <input type="text" id="contract" placeholder="Contract" required>
+     <input type="number" id="experience" placeholder="Experience" required>
+     <input type="text" id="skills" placeholder="Skills" required>
+     <input type="text" id="passvalid" placeholder="Pass" required>
+     <input type="text" id="busroute" placeholder="Bus" required>
+     <input type="text" id="location" placeholder="Location" required>
+
+     <input type="file" id="photo" accept="image/*" required>
+
+
+
+
+      <button onclick="saveEmployee()">Save</button>
+      <button class="clear" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+
+  <!-- VIEW MODAL -->
+<div id="viewModal" class="modal">
+  <div class="modal-content view-card">
+    <span class="close" onclick="closeView()">&times;</span>
+
+    <!-- PHOTO -->
+    <img id="viewPhoto" class="view-photo">
+
+    <!-- DETAILS -->
+    <h3 id="viewName"></h3>
+
+    <p><strong>Employee ID :</strong> <span id="viewEmpId"></span></p>
+    <p><strong>Designation :</strong> <span id="viewRole"></span></p>
+    <p><strong>Contract :</strong> <span id="viewContract"></span></p>
+    <p><strong>Experience :</strong> <span id="viewExperience"></span></p>
+    <p><strong>Skills :</strong> <span id="viewSkills"></span></p>
+    <p><strong>Pass Valid :</strong> <span id="viewPass"></span></p>
+    <p><strong>Bus Route :</strong> <span id="viewBus"></span></p>
+    <p><strong>Location :</strong> <span id="viewLocation"></span></p>
+
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
